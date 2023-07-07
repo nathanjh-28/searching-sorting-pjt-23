@@ -11,3 +11,26 @@ This method requires multiple iterations through the array and for average and w
 - Freecodecamp
 
 */
+
+function bubbleSort(array) {
+
+    let sortedLength = 0;
+
+    while (sortedLength < array.length) {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] > array[i + 1] && i !== (array.length - 1)) {
+                swap(array, i, i + 1)
+            }
+        }
+        sortedLength++;
+    }
+
+    return array;
+}
+
+function swap(arr, idx1, idx2) {
+    let temp = arr[idx1];
+    arr[idx1] = arr[idx2];
+    arr[idx2] = temp;
+    return arr;
+}
