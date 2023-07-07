@@ -12,6 +12,13 @@ This method requires multiple iterations through the array and for average and w
 
 */
 
+function swap(arr, idx1, idx2) {
+    let temp = arr[idx1];
+    arr[idx1] = arr[idx2];
+    arr[idx2] = temp;
+    return arr;
+}
+
 function bubbleSort(array) {
 
     let sortedLength = 0;
@@ -28,9 +35,6 @@ function bubbleSort(array) {
     return array;
 }
 
-function swap(arr, idx1, idx2) {
-    let temp = arr[idx1];
-    arr[idx1] = arr[idx2];
-    arr[idx2] = temp;
-    return arr;
-}
+/*
+Selection sort works by selecting the minimum value in a list and swapping it with the first value in the list. It then starts at the second position, selects the smallest value in the remaining list, and swaps it with the second element. It continues iterating through the list and swapping elements until it reaches the end of the list. Now the list is sorted. Selection sort has quadratic time complexity in all cases.
+*/
